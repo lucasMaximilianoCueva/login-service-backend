@@ -28,8 +28,7 @@ async function registerLocalController(req, res) {
         username: req.body.username,
         name: req.body.name,
         lastname: req.body.lastname,
-        password: hashedPassword,
-        gender: req.body.gender
+        password: hashedPassword
       });
       await newUser.save();
       res.send("User Created");
